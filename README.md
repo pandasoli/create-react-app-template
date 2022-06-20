@@ -1,6 +1,6 @@
 <div align='center'>
 
-# Initial Next App - Template
+# Initial React App - Template
 
 To use type:
 ```shell
