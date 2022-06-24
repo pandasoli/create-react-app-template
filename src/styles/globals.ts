@@ -3,18 +3,8 @@ import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
   @font-face {
-    font-family: 'FiraCode';
-    src: url('/fonts/FiraCode.ttf');
-  }
-
-  @font-face {
-    font-family: 'MavenPro';
-    src: url('/fonts/MavenPro.ttf');
-  }
-
-  @font-face {
-    font-family: 'Alpha centauri';
-    src: url('/fonts/Alphacentauri.ttf');
+    font-family: 'Poppins';
+    src: url('/fonts/poppins-regular.ttf');
   }
 
   * {
@@ -28,7 +18,7 @@ export const GlobalStyle = createGlobalStyle`
     font-size: min(4.2vw, 1.06rem);
     line-height: 1.33;
     color: var(--font-cl);
-    font-family: 'MavenPro';
+    font-family: 'Poppins';
     font-weight: normal;
     text-rendering: optimizeLegibility;
     image-rendering: optimizeQuality;
