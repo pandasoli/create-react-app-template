@@ -15,7 +15,7 @@ const Twemoji = (props: Props) => {
   const [ Emojis, SetEmojis ] = useState<EmojisType[]>([])
 
   useEffect(() => {
-    const newEmojis = []
+    const newEmojis: EmojisType[] = []
     props.emojis?.split(' ').forEach($ => {
       if ($.startsWith(':') && $.endsWith(':')) {
         const codeKey = $.substring(1, $.length - 1)
