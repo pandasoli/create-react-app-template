@@ -7,33 +7,54 @@ export const GlobalStyle = createGlobalStyle`
     src: url('/fonts/poppins-regular.ttf');
   }
 
+  @font-face {
+    font-family: 'FiraCode';
+    src: url('/fonts/fira-code.ttf');
+  }
+
   * {
     margin: 0px;
     padding: 0px;
-    appearance: none;
-    border: none;
-    background-color: transparent;
-    outline: none;
     box-sizing: border-box;
-    font-size: min(4.2vw, 1.06rem);
+
+    color: var(--primary-font-cl);
     line-height: 1.33;
-    color: var(--font-cl);
+    font-size: var(--text-regular);
+    font-weight: var(--font-weight-regular);
     font-family: 'Poppins';
-    font-weight: normal;
+    text-decoration: none;
+
     text-rendering: optimizeLegibility;
     image-rendering: optimizeQuality;
-    list-style: none;
-    text-decoration: none;
+
     transition: all .2s;
+    appearance: none;
+    outline: none;
+    border: none;
+    background-color: transparent;
 
-    --primary-font-cl: #181818;
-    --secondary-font-cl: #3e3e3e;
+    --primary-font-cl: #000;
+    --primary-font-cl-rgb: 0, 0, 0;
 
-    --primary-cl: #34df65;
-    --primary-cl-light: #2ce861;
-    --secondary-cl: #43ed74;
-    --red: #e82f2c;
-    --yellow: #dee82c;
+    --secondary-font-cl: #666;
+
+    --primary-cl: #fff;
+    --primary-cl-light: #eee;
+
+    --secondary-cl: #000;
+    --secondary-cl-light: #555;
+    --secondary-cl-rgb: 0, 0, 0;
+
+    --red-cl: #de5971;
+    --red-cl-rgb: 222, 89, 113;
+
+    --green-cl: #20c997;
+    --green-cl-rgb: 32, 201, 151;
+
+    --yellow-cl: #ffc107;
+    --yellow-cl-rgb: 255, 193, 7;
+
+    --box-shadow: 0px 0px 3px var(--secondary-cl);
 
     --header-1: 64px;
     --header-2: 48px;
@@ -49,55 +70,69 @@ export const GlobalStyle = createGlobalStyle`
     --font-weight-medium: 500;
     --font-weight-regular: 400;
     --font-weight-light: 300;
+
+    --sm-size: 768px;
+    --md-size: 992px;
+    --lg-size: 1200px;
   }
 
-  .btn {
-    margin: 2px;
-    padding: .375rem 1.5rem;
-    border-radius: 6px;
+  body {
+    display: flex;
+    flex-direction: column;
 
-    font-size: var(--text-regular);
-    font-weight: var(--font-weight-medium);
+    min-height: 100vh;
 
-    &, * {
-      transition: .2s;
-      color: var(--primary-font-cl) !important;
-      text-decoration: none;
+    background-color: var(--primary-cl);
+  }
+
+  #root {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  a {
+    color: var(--primary-font-cl);
+
+    &:hover {
+      color: var(--secondary-font-cl);
     }
   }
 
-  .btn.btn-primary:focus,
-  .navbar-toggler:focus,
-  .form-control:focus {
-    box-shadow: 0 0 0 0.25rem rgba(67, 237, 116, .8);
-  }
+  code {
+    display: block;
 
-  .btn.btn-primary {
-    margin: 5px;
+    margin: 0 4px;
+    padding: 4px;
 
-    background-color: var(--primary-cl);
-    border-color: var(--secondary-cl);
+    text-align: left;
 
-    &:hover *,
-    &:hover {
-      color: var(--white) !important;
-      background-color: var(--primary-cl-light);
+    border-radius: 4px;
+    background-color: var(--primary-cl-light);
+
+    * {
+      font-family: 'FiraCode';
+      font-size: .8rem;
     }
   }
 
   ::selection {
+    color: var(--primary-cl);
     background-color: var(--primary-cl);
   }
 
   ::-webkit-scrollbar {
-    width: 6px;
+    width: 14px;
+    height: 18px;
 
     background-color: transparent;
   }
 
   ::-webkit-scrollbar-thumb {
-    border-radius: 6px;
-    background-color: var(--primary-cl);
+    border-radius: 7px;
+    background-color: var(--secondary-cl);
+    border: 4px solid transparent;
+    background-clip: padding-box;
   }
 
   span {
