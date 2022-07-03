@@ -1,6 +1,8 @@
 import { createRoot } from 'react-dom/client'
 
 import App from './App'
+import Header from './components/Header'
+import Footer from './components/Footer'
 
 import { Container, Contents } from './styles/index.styles'
 import { GlobalStyle } from './styles/globals'
@@ -11,10 +13,13 @@ const root = createRoot(container)
 
 root.render(
   <Container>
+    <Header/>
+
     <Contents>
       <App/>
     </Contents>
 
+    <Footer/>
     <GlobalStyle/>
   </Container>
 )
