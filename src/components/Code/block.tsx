@@ -1,6 +1,6 @@
 import nookies from 'nookies'
 
-import AddJsonHighlight from '../../scripts/AddJsonHighlight'
+import JSONHighlight from './Highlight/JSON'
 import JavaScriptHighlight from './Highlight/JavaScript'
 import BFHighlight from './Highlight/Brainfuck'
 
@@ -38,9 +38,9 @@ const BlockCode = (props: Props) => {
 
     <Main>
       {
-        props.language === 'brainfuck'  ? <BFHighlight code={ props.code }/>                                              :
-        props.language === 'javascript' ? <JavaScriptHighlight code={ props.code }/>                                      :
-        props.language === 'json'       ? <div dangerouslySetInnerHTML={{ __html: AddJsonHighlight(props.code) }}/> :
+        props.language === 'brainfuck'  ? <BFHighlight code={ props.code }/>                                     :
+        props.language === 'javascript' ? <JavaScriptHighlight code={ props.code }/>                             :
+        props.language === 'json'       ? <div dangerouslySetInnerHTML={{ __html: JSONHighlight(props.code) }}/> :
         props.code
       }
     </Main>
