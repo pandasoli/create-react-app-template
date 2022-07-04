@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import { NavItem } from './index.styles'
+import { NavItem, Title } from './index.styles'
 import { Navbar, NavbarBrand, NavbarToggler, Collapse, Nav, NavLink } from 'reactstrap'
 
 
@@ -16,7 +16,7 @@ const Header = () => {
   return (
     <Navbar color='faded' light expand='md' dark>
       <NavbarBrand href='/'>
-        <h1>Panda' create-react-app-template</h1>
+        <Title>Panda' create-react-app-template</Title>
       </NavbarBrand>
 
       <NavbarToggler onClick={ () => SetOpen(!Open) }/>

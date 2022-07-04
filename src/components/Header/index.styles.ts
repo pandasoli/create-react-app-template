@@ -2,6 +2,10 @@ import styled from 'styled-components'
 import { NavItem as NavItemC } from 'reactstrap'
 
 
+export const Title = styled.h1`
+  margin: 0;
+`
+
 export const NavItem = styled(NavItemC)`
   position: relative;
 
