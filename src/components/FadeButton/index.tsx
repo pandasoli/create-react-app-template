@@ -1,6 +1,6 @@
 import { ReactNode, useState } from 'react'
 
-import Button from '../Button.styles'
+import Button from '../Button'
 import Container, { Header, Main } from './index.styles'
 
 type Props = {

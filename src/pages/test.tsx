@@ -1,5 +1,5 @@
 import P from '../components/P.styles'
-import Button from '../components/Button.styles'
+import Button from '../components/Button'
 import FadeButton from '../components/FadeButton'
 import FadeTitle from '../components/FadeTitle'
 import CodeBlock from '../components/Code/block'
