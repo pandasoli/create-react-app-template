@@ -56,10 +56,12 @@ export const GlobalStyle = createGlobalStyle`
 
     --box-shadow: 0px 0px 3px var(--secondary-cl);
 
+    --header-0: 120px;
     --header-1: 64px;
     --header-2: 48px;
     --header-3: 42px;
     --header-4: 32px;
+    --header-5: 26px;
 
     --text-medium: 10px;
     --text-regular: 16px;
@@ -83,6 +85,10 @@ export const GlobalStyle = createGlobalStyle`
     min-height: 100vh;
 
     background-color: var(--primary-cl);
+  }
+
+  h2, h2 * {
+    font-size: var(--header-5);
   }
 
   #root {
@@ -123,7 +129,7 @@ export const GlobalStyle = createGlobalStyle`
 
   ::-webkit-scrollbar {
     width: 14px;
-    height: 18px;
+    height: 14px;
 
     background-color: transparent;
   }
