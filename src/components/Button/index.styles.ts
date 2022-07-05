@@ -9,8 +9,8 @@ const Btn = (ft: string, bg: string, outline: boolean) => css`
 
   &:hover:not(.disabled),
   &:focus:not(.disabled) {
-    color: var(${outline ? ft : bg});
-    background-color: var(${outline ? bg : ft});
+    color: var(${outline ? ft : bg}) !important;
+    background-color: var(${outline ? bg : ft}) !important;
   }
 
   &:focus:not(.disabled) {
